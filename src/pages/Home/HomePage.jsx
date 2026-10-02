@@ -1,28 +1,15 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import useProducts from "../../hooks/useProducts";
 import ProductsGrid from "./ProductsGrid";
 function HomePage() {
-  const [ products, setProducts] = useState([]);
-  const [ error, setError] = useState(null);
-  const [ loading, setLoading] = useState(true);
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get('https://fakestoreapi.com/products');
-        setProducts(response.data);
-        setError(null);
-      } catch(err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    } 
-    fetchProducts();
-  },[])
-  if (loading) return <div style={{ display: 'flex', justifyContent: "center", color: 'black'}}><p>Loading...</p></div>
-  if (error) return <p>Error: {error}</p>
+  const { products, loading, error} = useProducts();
+  if (loading) return <div></div>;
+  if (error) return <div>{error}</div>;
   return (
-    <ProductsGrid products={products}/>
+    <div className="container my-5">
+      <ProductsGrid products={products}/>
+    </div>
   )
 }
 export default HomePage;
