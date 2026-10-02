@@ -1,10 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import './Header.css'
+import { Link } from 'react-router';
 function Header() {
   return (
-    <nav className="navbar navbar-expand-lg bg-warning navbar-light">
+    <nav className="navbar navbar-expand-lg bg-warning navbar-light sticky-top">
       <div className="container">
-        <a href="#" className="navbar-brand">Shop Project</a>
+        <Link to="/" className="navbar-brand" title='Home'>Shop Project</Link>
         <button className="navbar-toggler"
           type='button' 
           data-bs-toggle="collapse" 
@@ -15,10 +17,10 @@ function Header() {
         <div className="collapse navbar-collapse" id='navMenu'>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a href="#Orders" className="nav-link">Orders</a>
+              <Link to="/orders" className="nav-link">Orders</Link>
             </li>
             <li className="nav-item">
-              <a href="#Cart" className="nav-link">Cart</a>
+              <Link to="/cart" className="nav-link">Cart</Link>
             </li>
           </ul>
         </div>
