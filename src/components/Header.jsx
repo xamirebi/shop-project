@@ -4,9 +4,9 @@ import './Header.css'
 import { Link } from 'react-router';
 function Header() {
   return (
-    <nav className="navbar navbar-expand-lg bg-warning navbar-light sticky-top">
+    <nav className="navbar navbar-expand-lg navbar-dark sticky-top pb-3">
       <div className="container">
-        <Link to="/" className="navbar-brand" title='Home'>Shop Project</Link>
+        <Link to="/" className="navbar-brand" title='Home'>E - commerce</Link>
         <button className="navbar-toggler"
           type='button' 
           data-bs-toggle="collapse" 

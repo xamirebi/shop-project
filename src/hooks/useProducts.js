@@ -7,7 +7,7 @@ function useProducts() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const res = await productService.getAll();
+        const res = await productService.getProducts();
         setProducts(res);
       } catch(err) {
         setError(err.message);

@@ -2,21 +2,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 150px;
-  margin-bottom: 20px;
+  height: 200px;
 }
 .product-image {
   max-width: 100%;
   max-height: 100%;
-  border-radius: 5px;
   object-fit: contain;
 }
 .product-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  background-color: rgba(223, 223, 223, 0.982);
+  border: none;
 }
 .product-card:hover {
   transform: scale(1.05);
+  background-color: rgb(209, 209, 211);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   z-index: 2;
   position: relative;
+}
+.btn {
+  border-radius: 20px;
 }

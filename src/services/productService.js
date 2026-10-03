@@ -1,12 +1,12 @@
 import api from "./api";
 const productService = {
-  async getAll() {
-    const response = await api.get('/products');
+  async getProducts() {
+    const response = await api.get('/api/products');
     return response.data;
   },
   async getById(id) {
-    const response = await api.get(`/products/${id}`);
-    return response.data;
+    const all = await this.getProducts();
+    return all.find(p => p.id === Number(id));
   }
 }
 export default productService;
