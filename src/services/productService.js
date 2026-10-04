@@ -6,7 +6,7 @@ const productService = {
   },
   async getById(id) {
     const all = await this.getProducts();
-    return all.find(p => p.id === Number(id));
+    return all.find(p => p.id === id);
   }
 }
 export default productService;

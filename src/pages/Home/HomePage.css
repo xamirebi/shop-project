@@ -24,3 +24,7 @@
 .btn {
   border-radius: 20px;
 }
+.product-link {
+  text-decoration: none;
+  color: black;
+}

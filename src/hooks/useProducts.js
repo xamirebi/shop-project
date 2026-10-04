@@ -5,17 +5,23 @@ function useProducts() {
   const [ error, setError] = useState(null);
   const [ loading, setLoading] = useState(true);
   useEffect(() => {
+    let isMounted = true;
     async function fetchProducts() {
       try {
         const res = await productService.getProducts();
-        setProducts(res);
+        if (isMounted) {
+          if (res) {
+            setProducts(res);
+          } else setError('Products were not found');
+        }
       } catch(err) {
-        setError(err.message);
+        if (isMounted) setError(err.message || 'Failed to get the products');
       } finally {
-        setLoading(false);
+        if (isMounted) setLoading(false);
       }
     } 
     fetchProducts();
+    return () => { isMounted = false }
   },[])
   return {products, error, loading};
 }
