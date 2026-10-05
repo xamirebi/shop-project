@@ -2,9 +2,10 @@ import { Fragment } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import './CartPage.css'
-import useCart from "../../hooks/useCart";
+import { useCart } from "../../context/cartContext";
 
 function CartPage() {
+  
   const { cart, error, loading } = useCart();
   if (loading) return <div></div>;
   if (error) return <div>{error}</div>;
@@ -45,6 +46,7 @@ function CartPage() {
             </div>
           </Fragment>
         ))}
+
       </div>
     </div>
   );

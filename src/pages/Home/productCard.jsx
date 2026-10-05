@@ -1,6 +1,7 @@
 import './HomePage.css';
 import { Link } from 'react-router';
-function ProductCard({product}) {
+import AddToCart from '../../components/AddToCart.jsx';
+function ProductCard({ product }) {
   return (
     <div className="col-12 col-sm-6 col-md-4 col-lg-3">
       <div className="card h-100 shadow-sm product-card">
@@ -20,9 +21,7 @@ function ProductCard({product}) {
             <strong className="text-dark">
               ${(product.priceCents / 100).toFixed(2)}
             </strong>
-            <button className="btn btn-dark btn-sm" type='button' title='Add to cart'>
-              Add to Cart
-            </button>
+            <AddToCart productId={product.id}/>
           </div>
         </div>
       </div>

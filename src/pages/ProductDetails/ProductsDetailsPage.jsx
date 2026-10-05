@@ -1,6 +1,7 @@
 import useProduct from "../../hooks/useProduct";
 import { useParams, useNavigate } from "react-router";
 import { API_BASE_URL } from "../../services/api";
+import AddToCart from "../../components/AddToCart";
 function ProductDetailsPage() {
   const navigate = useNavigate();
   const { id } = useParams();
@@ -25,7 +26,7 @@ function ProductDetailsPage() {
           <h3 className="h3 mb-2" title={product.name}>{product.name}</h3>
           <div className="d-flex flex-column align-items-center" style={{ height:"250px"}}>
             <strong className="text-dark ms-auto me-auto ms-md-0 me-md-auto mt-3" title="price">${(product.priceCents/100).toFixed(2)}</strong>
-            <button className="btn btn-warning btn-lg w-75 mt-auto" type="button" title="Add to Cart">Add to Cart</button>
+            <AddToCart productId={product.id}/>
           </div>
         </div>
       </div>
