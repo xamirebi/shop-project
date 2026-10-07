@@ -1,16 +1,36 @@
-# React + Vite
+E-Commerce Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A work-in-progress e-commerce frontend built with React.js and Vite.
 
-Currently, two official plugins are available:
+This project is being developed as a portfolio project to practice and demonstrate frontend development, React, responsive design, API integration, and modern web development practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Technologies
 
-## React Compiler
+- React.js
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- Bootstrap
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Backend
 
-## Expanding the ESLint configuration
+This frontend uses an existing e-commerce backend created by SuperSimpleDev.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Original backend repository:
+
+https://github.com/SuperSimpleDev/ecommerce-backend-ai
+
+The backend is credited to its original author and is not presented as my own work.
+
+Project Status:
+
+Work in Progress.
+
+The project is actively being developed and improved. More functionality, design improvements, and refinements will be added over time.
+
+Author
+
+Amir Hossein Seyed Ebrahimi
+
+GitHub: https://github.com/xamirebi
