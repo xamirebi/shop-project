@@ -3,8 +3,8 @@ import { useState } from "react";
 import './AddToCart.css';
 function AddToCart({ productId }) {
   const { addToCart } = useCart();
-  const [showAdded, setShowAdded] = useState(false);
-  const [isloading, setIsLoading] = useState(false);
+  const [ showAdded, setShowAdded ] = useState(false);
+  const [ isloading, setIsLoading ] = useState(false);
 
   const handleClick = async () => {
     setIsLoading(true);

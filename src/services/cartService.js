@@ -1,13 +1,12 @@
 import api from "./api";
-const cartService = {
+class CartService {
   async getCart() {
     const response = await api.get('/api/cart-items?expand=product');
     return response.data;
-  },
-  async removeFromCart(id) {
-    const response = await api.delete(`/api/cart-items/${id}`);
-    return response.data;
-  },
+  }
+  async removeFromCart(productId) {
+    await api.delete(`/api/cart-items/${productId}`);
+  }
   async addToCart(id) {
     const response = await api.post("/api/cart-items", {
       productId: id,
@@ -16,4 +15,4 @@ const cartService = {
     return response.data;
   }
 }
-export default cartService;
+export default new CartService;
